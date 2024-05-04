@@ -1,6 +1,8 @@
 const { json } = require('body-parser');
 const express = require ('express');
 const router = express.Router();
+const fs = require('fs');
+const path = require('path');
 const videosData = require('../Data/video-details.json');
 
 router.get('/', (req, res) => {
@@ -21,15 +23,21 @@ router.get('/:id', (req, res) => {
 
 // POST /videos  add a new video
 router.post('/', (req, res) => {
-    const { title, description } = req.body;
+    const { title, description, image } = req.body;
     const newVideo = {
         id: generateUniqueId(), 
         title,
-        description
+        description,
+        image,
     };
     videosData.push(newVideo);
+    saveVideoData(videosData);
     res.status(201).json(newVideo);
 });
+
+   function saveVideoData (data){
+    fs.writeFileSync(path.join(__dirname, '../Data/video-details.json'), JSON.stringify(data, null, 2));
+   }
 
 
 module.exports = router;
