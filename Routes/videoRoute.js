@@ -5,15 +5,12 @@ const fs = require('fs');
 const path = require('path');
 const videosData = require('../Data/video-details.json');
 const { v4: uuidv4 } = require('uuid');
-const { url } = require('inspector');
+
 
 router.get('/', (req, res) => {
     res.status(200).json(videosData);
 });
 
-function generateUniqueId() {
-    return uuidv4(); 
-}
 
 // GET /videos/:id  get a single video by ID
 router.get('/:id', (req, res) => {
@@ -29,12 +26,21 @@ router.get('/:id', (req, res) => {
 
 // POST /videos  add a new video
 router.post('/', (req, res) => {
-    const { title, description } = req.body;
+    const { title, description, image, channel, views, likes, duration, video, timestamp, comments } = req.body;
 
     const newVideo = {
-        id: generateUniqueId(), 
+        id: uuidv4(), 
         title,
-        description
+        description,
+        image,
+        channel,
+        views,
+        likes,
+        duration,
+        video,
+        timestamp,
+        comments
+    
     };
     videosData.push(newVideo);
     saveVideoData(videosData);
