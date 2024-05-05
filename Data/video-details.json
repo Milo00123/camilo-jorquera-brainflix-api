@@ -329,34 +329,6 @@
     ]
   },
   {
-    "id": "125c92a3-f4bc-4c12-ad8d-fe6805cb6493",
-    "title": "camilo",
-    "description": "camilocamilo",
-    "image": "http://localhost:8080/images/upload-video.jpg",
-    "channel": "Super Camilo",
-    "views": "0",
-    "likes": "0",
-    "duration": "00:00",
-    "video": "",
-    "timestamp": 1714923798889,
-    "comments": [
-      {
-        "id": "2d818087-c1f4-4ec2-b5dc-b545fd6ec258",
-        "name": "chewbacca",
-        "comment": "waahahhwahaaaaaagggrrgrrrrr",
-        "likes": 10003393092,
-        "timestamp": "2024-05-05T15:43:18.889Z"
-      },
-      {
-        "id": "2d818087-c1f4-4ec2-bcdc-b545fd6ec258",
-        "name": "obi wan kenobi",
-        "comment": "may the force be with you",
-        "likes": 10003393092,
-        "timestamp": "2024-05-05T15:43:18.889Z"
-      }
-    ]
-  },
-  {
     "id": "acef9d34-9e4d-4cac-ad7e-72c51dc1136d",
     "title": "camilo",
     "description": "Luxury is something everyone deserves from time to time. Such an indulgence can make a vacation a truly rejuvenating experience. This video will focus a lot on helping the first time or inexperienced traveler head out prepared and confident in themselves.",
