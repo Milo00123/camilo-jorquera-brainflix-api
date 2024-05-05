@@ -6,9 +6,15 @@ const path = require('path');
 const videosData = require('../Data/video-details.json');
 const { v4: uuidv4 } = require('uuid');
 
-
+// Get Video SideBar 
 router.get('/', (req, res) => {
-    res.status(200).json(videosData);
+    const sideBarData = videosData.map(video => ({
+        id: video.id,
+        title: video.title,
+        cahnnel: video.channel,
+        image: video.image
+    }) );
+    res.status(200).json(sideBarData);
 });
 
 
